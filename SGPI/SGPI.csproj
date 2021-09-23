@@ -118,14 +118,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Coordinador.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Direccionador.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\recover.png" />
     <Content Include="Imagenes\search.png" />
+    <Content Include="Imagenes\skull.jpg" />
+    <Content Include="Imagenes\wallhaven-3k2qk9.jpg" />
+    <Content Include="Imagenes\wallhaven-4gw57n.jpg" />
+    <Content Include="Imagenes\wallhaven-k9pjmq.jpg" />
+    <Content Include="Imagenes\wallhaven-n6ww3x.png" />
+    <Content Include="Imagenes\wallhaven-zx829v.jpg" />
     <Content Include="Inicio.aspx" />
     <Content Include="MasterLogin.master" />
     <Content Include="NuevaContraseña.aspx" />
+    <Content Include="PagoMatriculaEstudiante.aspx" />
     <Content Include="PrincipalAdministrador.aspx" />
+    <Content Include="principalEstudiante.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -186,6 +195,10 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Songs\_Halo song bathroom_128k.mp3" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="video\mylivewallpapers.com-Death-Sworn-Katarina-LoL.mp4" />
+    <Content Include="video\video.mp4" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -222,6 +235,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Direccionador.aspx.cs">
+      <DependentUpon>Direccionador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direccionador.aspx.designer.cs">
+      <DependentUpon>Direccionador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -246,12 +266,26 @@
     <Compile Include="NuevaContraseña.aspx.designer.cs">
       <DependentUpon>NuevaContraseña.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PagoMatriculaEstudiante.aspx.cs">
+      <DependentUpon>PagoMatriculaEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagoMatriculaEstudiante.aspx.designer.cs">
+      <DependentUpon>PagoMatriculaEstudiante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PrincipalAdministrador.aspx.cs">
       <DependentUpon>PrincipalAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PrincipalAdministrador.aspx.designer.cs">
       <DependentUpon>PrincipalAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="principalEstudiante.aspx.cs">
+      <DependentUpon>principalEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="principalEstudiante.aspx.designer.cs">
+      <DependentUpon>principalEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecuperarContraseña.aspx.cs">

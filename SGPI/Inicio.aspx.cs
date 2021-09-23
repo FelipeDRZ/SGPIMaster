@@ -16,7 +16,7 @@ namespace SGPI
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PrincipalAdministrador.aspx");
+            Response.Redirect("~/Direccionador.aspx");
         }
     }
 }

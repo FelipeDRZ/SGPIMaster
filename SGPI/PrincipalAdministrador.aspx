@@ -61,7 +61,7 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblTipoDocumento" runat="server" Text="Tipo de Documento:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="DropDownList1" class="form-control" AutoPostBack="true" runat="server" required="true">
+                            <asp:DropDownList ID="ddlTipoDocumento" class="form-control" AutoPostBack="true" runat="server" required="true">
                                 <asp:ListItem text ="Seleccione Id" Selected="false"></asp:ListItem>
                                 <asp:ListItem text ="Cedula Ciudadania" ></asp:ListItem>
                                 <asp:ListItem text ="tarjeta Identidad" ></asp:ListItem>
@@ -216,6 +216,18 @@
                             <img src="Imagenes/search.png" />
                             <asp:Button ID="Button1" class="btn btn-danger" runat="server" Text="Buscar" />
                             <br />
+                        </div>
+                        <div class="COL-12">
+                            <asp:GridView id="gvrEliminar" class="table table-borderless" runat="server" AutoGenerateColumns="false">
+                                <Columns>
+                                    <asp:BoundField HeaderText="Documento" DataField="Documento" />
+                                    <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+                                    <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
+                                    <asp:BoundField HeaderText="Rol" DataField="Rol" />
+                                    <asp:BoundField HeaderText="Programa" DataField="Programa" />
+                                    <asp:BoundField HeaderText="Opciones" DataField="Opciones" />
+                                </Columns>
+                            </asp:GridView>
                         </div>
                     </div>
                 </div>
