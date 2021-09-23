@@ -11,7 +11,7 @@
     font-size: 25px;
     text-decoration: none;
     transition: 0.2s;
-    overflow: hidden;
+    overflow: hidden; 
     z-index:1;
 }
     .btn-Neon:hover {

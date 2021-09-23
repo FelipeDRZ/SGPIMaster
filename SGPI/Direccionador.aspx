@@ -9,7 +9,7 @@
     <title></title>
 </head>
 <body class="d-flex justify-content-center">
-    <div>
+    <div> 
         <a href="PrincipalAdministrador.aspx">Entrar a Administrador</a>
         <br />
         <a href="principalEstudiante.aspx">Entrar a Estudiante</a>

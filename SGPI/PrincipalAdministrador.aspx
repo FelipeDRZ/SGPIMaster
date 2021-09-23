@@ -1,15 +1,14 @@
-﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="PrincipalAdministrador.aspx.cs" Inherits="SGPI.PrincipalAdministrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PrincipalAdministrador.aspx.cs" Inherits="SGPI.PrincipalAdministrador" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>
-
-    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
 </head>
 <body>
     <!-- menu Principal-->
@@ -62,10 +61,10 @@
                             <asp:Label ID="lblTipoDocumento" runat="server" Text="Tipo de Documento:"></asp:Label>
                             <br />
                             <asp:DropDownList ID="ddlTipoDocumento" class="form-control" AutoPostBack="true" runat="server" required="true">
-                                <asp:ListItem text ="Seleccione Id" Selected="false"></asp:ListItem>
-                                <asp:ListItem text ="Cedula Ciudadania" ></asp:ListItem>
-                                <asp:ListItem text ="tarjeta Identidad" ></asp:ListItem>
-                                <asp:ListItem text ="Pasaporte" ></asp:ListItem>
+                                <asp:ListItem Text="Seleccione Id" Selected="false"></asp:ListItem>
+                                <asp:ListItem Text="Cedula Ciudadania"></asp:ListItem>
+                                <asp:ListItem Text="tarjeta Identidad"></asp:ListItem>
+                                <asp:ListItem Text="Pasaporte"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
                         <div class="col-sm-5">
@@ -86,10 +85,10 @@
                             <asp:Label ID="lblGenero" runat="server" Text="Genero:"></asp:Label>
                             <br />
                             <asp:DropDownList ID="ddlGenero" class="form-control" AutoPostBack="true" runat="server" required="true">
-                                <asp:ListItem text ="Seleccione genero" Selected="false"></asp:ListItem>
-                                <asp:ListItem text ="Masculino" ></asp:ListItem>
-                                <asp:ListItem text ="Femenino" ></asp:ListItem>
-                                <asp:ListItem text ="Otro" ></asp:ListItem>
+                                <asp:ListItem Text="Seleccione genero" Selected="false"></asp:ListItem>
+                                <asp:ListItem Text="Masculino"></asp:ListItem>
+                                <asp:ListItem Text="Femenino"></asp:ListItem>
+                                <asp:ListItem Text="Otro"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
                         <div class="col-sm-5">
@@ -122,15 +121,15 @@
                         </div>
                         <div class="col-sm-5 text-center">
                             <br />
-                            <asp:Button ID="btnRegistrar" class="btn btn-sm btn-outline-info" runat="server" Text="Registrar" Width="100px"/>
-                            </div>
+                            <asp:Button ID="btnRegistrar" class="btn btn-sm btn-outline-info" runat="server" Text="Registrar" Width="100px" />
+                        </div>
                         <div class="col-sm-5 d-inline">
                             <br />
                             <asp:Button ID="btnCancelar" class="btn btn-sm btn-outline-danger" runat="server" Text="Cancelar" Width="100px" />
                         </div>
-                        </div>
+                    </div>
                 </div>
-                 <!-----------------------------------------contenido de Editar------------------------------>
+                <!-----------------------------------------contenido de Editar------------------------------>
                 <div id="Editar" class="container tab-pane fade">
                     <br />
                     <h3>Editar Usuario</h3>
@@ -166,10 +165,10 @@
                             <asp:Label ID="lblTipoDeDocumentoE" runat="server" Text="Tipo de Documento:"></asp:Label>
                             <br />
                             <asp:DropDownList ID="DDLTipoDeDocumentoE" class="form-control" AutoPostBack="true" runat="server" required="true">
-                                <asp:ListItem text ="Seleccione Id" Selected="false"></asp:ListItem>
-                                <asp:ListItem text ="Cedula Ciudadania" ></asp:ListItem>
-                                <asp:ListItem text ="tarjeta Identidad" ></asp:ListItem>
-                                <asp:ListItem text ="Pasaporte" ></asp:ListItem>
+                                <asp:ListItem Text="Seleccione Id" Selected="false"></asp:ListItem>
+                                <asp:ListItem Text="Cedula Ciudadania"></asp:ListItem>
+                                <asp:ListItem Text="tarjeta Identidad"></asp:ListItem>
+                                <asp:ListItem Text="Pasaporte"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
                         <div class="col-sm-5">
@@ -181,10 +180,10 @@
                             <asp:Label ID="lblGeneroE" runat="server" Text="Genero:"></asp:Label>
                             <br />
                             <asp:DropDownList ID="DDLGeneroE" class="form-control" AutoPostBack="true" runat="server" required="true">
-                                <asp:ListItem text ="Seleccione genero" Selected="false"></asp:ListItem>
-                                <asp:ListItem text ="Masculino" ></asp:ListItem>
-                                <asp:ListItem text ="Femenino" ></asp:ListItem>
-                                <asp:ListItem text ="Otro" ></asp:ListItem>
+                                <asp:ListItem Text="Seleccione genero" Selected="false"></asp:ListItem>
+                                <asp:ListItem Text="Masculino"></asp:ListItem>
+                                <asp:ListItem Text="Femenino"></asp:ListItem>
+                                <asp:ListItem Text="Otro"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
                         <div class="col-sm-5">
@@ -197,14 +196,14 @@
                             <br />
                             <asp:TextBox ID="txtCorreoE" type="email" class="form-control" runat="server" required="true" placeholder="@example"></asp:TextBox>
                         </div>
-                        
+
                         <div class="col-12 text-center">
                             <br />
                             <asp:Button ID="btnEditar" class="btn btn-sm btn-outline-info" runat="server" Text="Editar" />
                         </div>
                     </div>
                 </div>
-                 <!-----------------------------------------contenido de Eliminar------------------------------>
+                <!-----------------------------------------contenido de Eliminar------------------------------>
                 <div id="Eliminar" class="container tab-pane fade">
                     <br />
                     <h3>Eliminar Usuario</h3>
@@ -218,7 +217,7 @@
                             <br />
                         </div>
                         <div class="COL-12">
-                            <asp:GridView id="gvrEliminar" class="table table-borderless" runat="server" AutoGenerateColumns="false">
+                            <asp:GridView ID="gvrEliminar" class="table table-borderless" runat="server" AutoGenerateColumns="false">
                                 <Columns>
                                     <asp:BoundField HeaderText="Documento" DataField="Documento" />
                                     <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
