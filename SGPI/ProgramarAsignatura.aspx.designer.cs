@@ -11,7 +11,7 @@ namespace SGPI
 {
 
 
-    public partial class Coordinador
+    public partial class ProgramarAsignatura
     {
 
         /// <summary>
@@ -24,39 +24,48 @@ namespace SGPI
         protected global::System.Web.UI.HtmlControls.HtmlForm form;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblPeriodoAcademico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblPeriodoAcademico;
 
         /// <summary>
-        /// Control txtBuscar.
+        /// Control lblSemAcademico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
+        protected global::System.Web.UI.WebControls.Label lblSemAcademico;
 
         /// <summary>
-        /// Control btnBuscar.
+        /// Control lblPrograma.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.Label lblPrograma;
 
         /// <summary>
-        /// Control grvConsulta.
+        /// Control DDLCurso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvConsulta;
+        protected global::System.Web.UI.WebControls.DropDownList DDLCurso;
+
+        /// <summary>
+        /// Control grvPrograma.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grvPrograma;
     }
 }

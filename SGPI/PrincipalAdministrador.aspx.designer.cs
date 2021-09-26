@@ -420,22 +420,22 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.Button btnEditar;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblBuscarEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblBuscarEliminar;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtBuscarEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtBuscarEliminar;
 
         /// <summary>
         /// Control Button1.
