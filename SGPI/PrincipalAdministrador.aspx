@@ -14,10 +14,10 @@
     <!-- menu Principal-->
     <ul class="nav nav-pills  bg-dark">
         <li class="nav-item">
-            <a class="nav-link active bg-info text-white font-weight-bold" href="#Usuario">Modulo Usuario</a>
+            <a class="nav-link active bg-info text-white font-weight-bold" href="PrincipalAdministrador.aspx">Modulo Usuario</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active bg-dark font-weight-bold" href="#">Modulo Reporte</a>
+            <a class="nav-link active bg-dark font-weight-bold" href="ReportesAdministrador.aspx">Modulo Reporte</a>
         </li>
     </ul>
     <!-- Panel -->

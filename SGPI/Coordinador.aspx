@@ -15,7 +15,7 @@
         </a>
         <a href="ProgramarAsignatura.aspx" class="btn-Neon text-dark">Programar Asignatura
         </a>
-        <a class="btn-Neon text-dark">Homologacion
+        <a href="HomologacionCoordinador.aspx" class="btn-Neon text-dark">Homologacion
         </a>
         <a class="btn-Neon text-dark">Entrevista y Admiciones
         </a>

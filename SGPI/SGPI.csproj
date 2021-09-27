@@ -122,6 +122,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Formato.css" />
     <Content Include="Global.asax" />
+    <Content Include="HomologacionCoordinador.aspx" />
     <Content Include="Imagenes\recover.png" />
     <Content Include="Imagenes\search.png" />
     <Content Include="Imagenes\skull.jpg" />
@@ -137,6 +138,7 @@
     <Content Include="PrincipalAdministrador.aspx" />
     <Content Include="principalEstudiante.aspx" />
     <Content Include="ProgramarAsignatura.aspx" />
+    <Content Include="ReportesAdministrador.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -248,6 +250,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HomologacionCoordinador.aspx.cs">
+      <DependentUpon>HomologacionCoordinador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomologacionCoordinador.aspx.designer.cs">
+      <DependentUpon>HomologacionCoordinador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +313,13 @@
     </Compile>
     <Compile Include="RecuperarContraseña.aspx.designer.cs">
       <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesAdministrador.aspx.cs">
+      <DependentUpon>ReportesAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesAdministrador.aspx.designer.cs">
+      <DependentUpon>ReportesAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
