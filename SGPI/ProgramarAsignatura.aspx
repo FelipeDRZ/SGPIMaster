@@ -9,13 +9,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body class="form">
+<body>
+    <div>
+        <a href="Coordinador.aspx" class="btn-Neon text-dark font-weight-bold">Consultar
+        </a>
+        <a href="ProgramarAsignatura.aspx" class="btn-Neon text-dark">Programar Asignatura
+        </a>
+        <a href="HomologacionCoordinador.aspx" class="btn-Neon text-dark">Homologacion
+        </a>
+        <a class="btn-Neon text-dark">Entrevista y Admiciones
+        </a>
+    </div>
     <div>
         <form id="form" runat="server">
             <div>
                 <br />
             </div>
-            <div class="form-inline text-light font-weight-bold justify-content-center">
+            <div class="form-inline text-dark font-weight-bold justify-content-center">
                 <div class="col-sm-5">
                     <asp:Label ID="lblPeriodoAcademico" runat="server" Text="Periodo Academico:"></asp:Label>
                     <br />
@@ -35,7 +45,7 @@
                 <br />
             </div>
             <div class="row justify-content-center">
-                <asp:GridView ID="grvPrograma" class="table table-borderless text-light" runat="server" AutoGenerateColumns="false" Width="1000px">
+                <asp:GridView ID="grvPrograma" class="table table-borderless table-dark" runat="server" AutoGenerateColumns="false" Width="1000px">
                     <Columns>
                         <asp:BoundField HeaderText="Fecha" DataField="Fecha"></asp:BoundField>
                         <asp:BoundField HeaderText="Aula" DataField="Aula" />
