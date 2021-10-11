@@ -60,21 +60,17 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblTipoDocumento" runat="server" Text="Tipo de Documento:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="ddlTipoDocumento" class="form-control" AutoPostBack="true" runat="server" required="true">
+                            <asp:DropDownList ID="ddlTipoDocumento" class="form-control" AutoPostBack="True" runat="server" required="true" AppendDataBoundItems="True" DataSourceID="SqlDataSource2" DataTextField="Documento" DataValueField="TipoDocumento">
                                 <asp:ListItem Text="Seleccione Id" Selected="false"></asp:ListItem>
-                                <asp:ListItem Text="Cedula Ciudadania"></asp:ListItem>
-                                <asp:ListItem Text="tarjeta Identidad"></asp:ListItem>
-                                <asp:ListItem Text="Pasaporte"></asp:ListItem>
                             </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Documento]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblRol" class="radio" runat="server" Text="Rol:" required="true"></asp:Label>
                             <br />
-                            <asp:RadioButtonList ID="rblRol" runat="server">
-                                <asp:ListItem Text="Administrador"></asp:ListItem>
-                                <asp:ListItem Text="Estudiante"></asp:ListItem>
-                                <asp:ListItem Text="Coordinador"></asp:ListItem>
+                            <asp:RadioButtonList ID="rblRol" runat="server" DataSourceID="SqlDataSource4" DataTextField="TipoRol" DataValueField="Rol">
                             </asp:RadioButtonList>
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Rol]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblEdad" runat="server" Text="Edad:"></asp:Label>
@@ -84,12 +80,10 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblGenero" runat="server" Text="Genero:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="ddlGenero" class="form-control" AutoPostBack="true" runat="server" required="true">
+                            <asp:DropDownList ID="ddlGenero" class="form-control" AutoPostBack="True" runat="server" required="true" DataSourceID="SqlDataSource1" DataTextField="TipoGenero" DataValueField="Genero" AppendDataBoundItems="True">
                                 <asp:ListItem Text="Seleccione genero" Selected="false"></asp:ListItem>
-                                <asp:ListItem Text="Masculino"></asp:ListItem>
-                                <asp:ListItem Text="Femenino"></asp:ListItem>
-                                <asp:ListItem Text="Otro"></asp:ListItem>
                             </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Genero]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblContraseña" runat="server" Text="Contraseña:"></asp:Label>
@@ -109,12 +103,10 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblCarrera" runat="server" Text="Curso estudiantil:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="DDLCurso" class="form-control" AutoPostBack="true" runat="server" required="true" Width="650px">
+                            <asp:DropDownList ID="DDLCurso" class="form-control" AutoPostBack="True" runat="server" required="true" Width="650px" DataSourceID="SqlDataSource3" DataTextField="tipoPrograma" DataValueField="Programa" AppendDataBoundItems="True">
                                 <asp:ListItem Text="Seleccione Curso" Selected="false"></asp:ListItem>
-                                <asp:ListItem Text="Especializacion en seguridad de la informacion"></asp:ListItem>
-                                <asp:ListItem Text="Maestria en gestion TI"></asp:ListItem>
-                                <asp:ListItem Text="Maestria en Gestion Ambiental"></asp:ListItem>
                             </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [ProgramaEstudiantil]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <br />

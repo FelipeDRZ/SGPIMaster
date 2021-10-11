@@ -74,3 +74,7 @@ C:\Users\felip\source\repos\SGPIMaster\SGPI\obj\Debug\SGPI.csproj.CoreCompileInp
 C:\Users\felip\source\repos\SGPIMaster\SGPI\obj\Debug\SGPI.csproj.CopyComplete
 C:\Users\felip\source\repos\SGPIMaster\SGPI\obj\Debug\SGPI.dll
 C:\Users\felip\source\repos\SGPIMaster\SGPI\obj\Debug\SGPI.pdb
+C:\Users\felip\source\repos\SGPIMaster\SGPI\bin\EntityFramework.dll
+C:\Users\felip\source\repos\SGPIMaster\SGPI\bin\EntityFramework.SqlServer.dll
+C:\Users\felip\source\repos\SGPIMaster\SGPI\bin\EntityFramework.xml
+C:\Users\felip\source\repos\SGPIMaster\SGPI\bin\EntityFramework.SqlServer.xml
