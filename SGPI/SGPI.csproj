@@ -141,15 +141,15 @@
     <Content Include="Imagenes\wallhaven-zx829v.jpg" />
     <Content Include="Inicio.aspx" />
     <Content Include="MasterLogin.master" />
-    <Content Include="ModelSGPIMaster.Context.tt">
+    <Content Include="ModelSGPI.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelSGPIMaster.Context.cs</LastGenOutput>
-      <DependentUpon>ModelSGPIMaster.edmx</DependentUpon>
+      <DependentUpon>ModelSGPI.edmx</DependentUpon>
+      <LastGenOutput>ModelSGPI.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelSGPIMaster.tt">
+    <Content Include="ModelSGPI.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelSGPIMaster.edmx</DependentUpon>
-      <LastGenOutput>ModelSGPIMaster.cs</LastGenOutput>
+      <DependentUpon>ModelSGPI.edmx</DependentUpon>
+      <LastGenOutput>ModelSGPI.cs</LastGenOutput>
     </Content>
     <Content Include="NuevaContraseña.aspx" />
     <Content Include="PagoMatriculaEstudiante.aspx" />
@@ -179,12 +179,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="ModelSGPIMaster.edmx">
+    <EntityDeploy Include="ModelSGPI.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelSGPIMaster.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelSGPI.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="ModelSGPIMaster.edmx.diagram">
-      <DependentUpon>ModelSGPIMaster.edmx</DependentUpon>
+    <Content Include="ModelSGPI.edmx.diagram">
+      <DependentUpon>ModelSGPI.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Imagenes\login.png" />
@@ -230,9 +230,15 @@
     <Content Include="video\mylivewallpapers.com-Death-Sworn-Katarina-LoL.mp4" />
     <Content Include="video\video.mp4" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Web.Config" />
+    <None Include="Web.Debug.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
+    <None Include="Web.Release.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -245,7 +251,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Asignatura.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -277,19 +283,19 @@
       <DependentUpon>Direccionador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Documento.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="Estudiante.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="Genero.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Homologacion.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="HomologacionCoordinador.aspx.cs">
       <DependentUpon>HomologacionCoordinador.aspx</DependentUpon>
@@ -312,20 +318,20 @@
     <Compile Include="MasterLogin.master.designer.cs">
       <DependentUpon>MasterLogin.master</DependentUpon>
     </Compile>
-    <Compile Include="ModelSGPIMaster.Context.cs">
+    <Compile Include="ModelSGPI.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelSGPIMaster.Context.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelSGPIMaster.cs">
+    <Compile Include="ModelSGPI.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelSGPIMaster.Designer.cs">
+    <Compile Include="ModelSGPI.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelSGPIMaster.edmx</DependentUpon>
+      <DependentUpon>ModelSGPI.edmx</DependentUpon>
     </Compile>
     <Compile Include="NuevaContraseña.aspx.cs">
       <DependentUpon>NuevaContraseña.aspx</DependentUpon>
@@ -334,15 +340,15 @@
     <Compile Include="NuevaContraseña.aspx.designer.cs">
       <DependentUpon>NuevaContraseña.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pago.cs">
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
+    </Compile>
     <Compile Include="PagoMatriculaEstudiante.aspx.cs">
       <DependentUpon>PagoMatriculaEstudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PagoMatriculaEstudiante.aspx.designer.cs">
       <DependentUpon>PagoMatriculaEstudiante.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pagos.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
     </Compile>
     <Compile Include="PrincipalAdministrador.aspx.cs">
       <DependentUpon>PrincipalAdministrador.aspx</DependentUpon>
@@ -359,10 +365,10 @@
       <DependentUpon>principalEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Programacion.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="ProgramaEstudiantil.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="ProgramarAsignatura.aspx.cs">
       <DependentUpon>ProgramarAsignatura.aspx</DependentUpon>
@@ -387,7 +393,7 @@
       <DependentUpon>ReportesAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Rol.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -404,10 +410,10 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="TipoHomologacion.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="UsuarioAdmin.cs">
-      <DependentUpon>ModelSGPIMaster.tt</DependentUpon>
+      <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -433,12 +439,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

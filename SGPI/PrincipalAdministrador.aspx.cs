@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Linq;
 
 namespace SGPI
 {
@@ -24,6 +25,26 @@ namespace SGPI
                 gvrEliminar.HeaderRow.TableSection = TableRowSection.TableHeader;
 
             }
+        }
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            using (SGPI_BDEntities sGPI_BDEntities = new SGPI_BDEntities())
+            {
+                UsuarioAdmin usuario = new UsuarioAdmin();
+                usuario.Documento = txtDocumento.Text;
+                usuario.Nombre = txtNombre.Text;
+                usuario.Apellido = txtApellido.Text;
+                usuario.Usuario = txtNombreUsuario.Text;
+                usuario.Contraseña = txtContraseña.Text;
+                usuario.Correo = txtCorreo.Text;
+                usuario.Genero = Convert.ToInt32(ddlGenero.SelectedValue);
+                usuario.Rol = Convert.ToInt32(rblRol.SelectedValue);
+                usuario.Programa = Convert.ToInt32(DDLCurso.SelectedValue);
+
+            }
+            /*sGPI_BDEntities.UsuarioAdmin.Add();*/
+
         }
     }
 }

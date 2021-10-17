@@ -30,8 +30,9 @@ namespace SGPI
         public string Usuario { get; set; }
         public string Contraseña { get; set; }
         public int Programa { get; set; }
+        public string Documento { get; set; }
     
-        public virtual Documento Documento { get; set; }
+        public virtual Documento Documento1 { get; set; }
         public virtual Estudiante Estudiante { get; set; }
         public virtual Genero Genero1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

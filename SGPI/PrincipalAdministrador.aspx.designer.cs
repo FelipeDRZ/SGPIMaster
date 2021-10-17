@@ -96,13 +96,13 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.DropDownList ddlTipoDocumento;
 
         /// <summary>
-        /// Control SqlDataSource2.
+        /// Control SqlDataSourceDocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceDocumento;
 
         /// <summary>
         /// Control lblRol.
@@ -123,31 +123,13 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.RadioButtonList rblRol;
 
         /// <summary>
-        /// Control SqlDataSource4.
+        /// Control SqlDataSourceRol.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
-
-        /// <summary>
-        /// Control lblEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEdad;
-
-        /// <summary>
-        /// Control txtEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEdad;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceRol;
 
         /// <summary>
         /// Control lblGenero.
@@ -168,13 +150,13 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
 
         /// <summary>
-        /// Control SqlDataSource1.
+        /// Control SqlDataSourceGenero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceGenero;
 
         /// <summary>
         /// Control lblContraseña.
@@ -249,13 +231,13 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.DropDownList DDLCurso;
 
         /// <summary>
-        /// Control SqlDataSource3.
+        /// Control SqlDataSourceCurso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceCurso;
 
         /// <summary>
         /// Control btnRegistrar.
@@ -348,13 +330,13 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.Label lblDocumentoE;
 
         /// <summary>
-        /// Control txtlblDocumentoE.
+        /// Control txtDocumentoE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlblDocumentoE;
+        protected global::System.Web.UI.WebControls.TextBox txtDocumentoE;
 
         /// <summary>
         /// Control lblTipoDeDocumentoE.
@@ -373,24 +355,6 @@ namespace SGPI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DDLTipoDeDocumentoE;
-
-        /// <summary>
-        /// Control lblEdadE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEdadE;
-
-        /// <summary>
-        /// Control txtEdadE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEdadE;
 
         /// <summary>
         /// Control lblGeneroE.

@@ -12,10 +12,10 @@ namespace SGPI
     using System;
     using System.Collections.Generic;
     
-    public partial class Pagos
+    public partial class Pago
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pagos()
+        public Pago()
         {
             this.Estudiante = new HashSet<Estudiante>();
         }
@@ -23,7 +23,7 @@ namespace SGPI
         public int IdPago { get; set; }
         public bool Estado { get; set; }
         public System.DateTime Fecha { get; set; }
-        public decimal ValorPago { get; set; }
+        public decimal valorPago { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Estudiante> Estudiante { get; set; }

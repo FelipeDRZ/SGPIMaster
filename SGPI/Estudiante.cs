@@ -15,10 +15,10 @@ namespace SGPI
     public partial class Estudiante
     {
         public int ID { get; set; }
-        public string Archivo { get; set; }
+        public string Archino { get; set; }
         public int IdPago { get; set; }
     
-        public virtual Pagos Pagos { get; set; }
+        public virtual Pago Pago { get; set; }
         public virtual UsuarioAdmin UsuarioAdmin { get; set; }
     }
 }

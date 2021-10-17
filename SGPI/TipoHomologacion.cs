@@ -14,7 +14,16 @@ namespace SGPI
     
     public partial class TipoHomologacion
     {
-        public int IdHomologacion { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TipoHomologacion()
+        {
+            this.Homologacion = new HashSet<Homologacion>();
+        }
+    
+        public int IdHomo { get; set; }
         public string TipoHomologacion1 { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Homologacion> Homologacion { get; set; }
     }
 }

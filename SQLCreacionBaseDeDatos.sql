@@ -18,23 +18,26 @@ CREATE TABLE [dbo].[Rol] (
     [TipoRol] VARCHAR (30) NOT NULL,
     PRIMARY KEY CLUSTERED ([Rol] ASC)
 );
+
 CREATE TABLE [dbo].[UsuarioAdmin] (
-    [ID]            INT          NOT NULL,
-    [TipoDocumento] INT          NOT NULL,
-    [Nombre]        VARCHAR (30) NOT NULL,
-    [Apellido]      VARCHAR (30) NOT NULL,
-    [Genero]        INT          NOT NULL,
-    [Correo]        VARCHAR (50) NOT NULL,
-    [Rol]           INT          NOT NULL,
-    [Usuario]       VARCHAR (30) NOT NULL,
-    [Contraseña]    VARCHAR (30) NOT NULL,
-    [Programa]      INT          NOT NULL,
+    [ID]            INT           IDENTITY (1, 1) NOT NULL,
+    [TipoDocumento] INT           NOT NULL,
+    [Nombre]        VARCHAR (30)  NOT NULL,
+    [Apellido]      VARCHAR (30)  NOT NULL,
+    [Genero]        INT           NOT NULL,
+    [Correo]        VARCHAR (50)  NOT NULL,
+    [Rol]           INT           NOT NULL,
+    [Usuario]       VARCHAR (30)  NOT NULL,
+    [Contraseña]    VARCHAR (100) NOT NULL,
+    [Programa]      INT           NOT NULL,
+    [Documento]     VARCHAR (10)  NOT NULL,
     PRIMARY KEY CLUSTERED ([ID] ASC),
     FOREIGN KEY ([TipoDocumento]) REFERENCES [dbo].[Documento] ([TipoDocumento]),
     FOREIGN KEY ([Genero]) REFERENCES [dbo].[Genero] ([Genero]),
     FOREIGN KEY ([Rol]) REFERENCES [dbo].[Rol] ([Rol]),
     FOREIGN KEY ([Programa]) REFERENCES [dbo].[ProgramaEstudiantil] ([Programa])
 );
+
 CREATE TABLE [dbo].[TipoHomologacion]
 (
 	[IdHomologacion] INT NOT NULL PRIMARY KEY, 
@@ -108,6 +111,8 @@ VALUES (3,'Maestria en gestion TI');
 INSERT INTO ProgramaEstudiantil(Programa,tipoPrograma)
 VALUES (4,'Maestria en Gestion Ambiental');
 
+
+
 select * from Genero
 select * from Rol
 select * from TipoHomologacion
@@ -115,5 +120,8 @@ select * from Documento
 select * from UsuarioAdmin
 select * from ProgramaEstudiantil
 
-alter table UsuarioAdmin Add Documento nvarchar(10); 
+
+alter table UsuarioAdmin alter Column Contraseña varchar(100); 
 alter table UsuarioAdmin drop column Documento
+
+drop table UsuarioAdmin;

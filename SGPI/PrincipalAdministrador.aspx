@@ -55,35 +55,30 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblDocumento" runat="server" Text="Documento:"></asp:Label>
                             <br />
-                            <asp:TextBox ID="txtDocumento" type="number" class="form-control" runat="server" required="true" placeholder="#">ID</asp:TextBox>
+                            <asp:TextBox ID="txtDocumento" class="form-control" runat="server" required="true" placeholder="#"></asp:TextBox>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblTipoDocumento" runat="server" Text="Tipo de Documento:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="ddlTipoDocumento" class="form-control" AutoPostBack="True" runat="server" required="true" AppendDataBoundItems="True" DataSourceID="SqlDataSource2" DataTextField="Documento" DataValueField="TipoDocumento">
+                            <asp:DropDownList ID="ddlTipoDocumento" class="form-control" AutoPostBack="True" runat="server" required="true" AppendDataBoundItems="True" DataSourceID="SqlDataSourceDocumento" DataTextField="Documento" DataValueField="TipoDocumento">
                                 <asp:ListItem Text="Seleccione Id" Selected="false"></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Documento]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSourceDocumento" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Documento]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblRol" class="radio" runat="server" Text="Rol:" required="true"></asp:Label>
                             <br />
-                            <asp:RadioButtonList ID="rblRol" runat="server" DataSourceID="SqlDataSource4" DataTextField="TipoRol" DataValueField="Rol">
+                            <asp:RadioButtonList ID="rblRol" runat="server" DataSourceID="SqlDataSourceRol" DataTextField="TipoRol" DataValueField="Rol">
                             </asp:RadioButtonList>
-                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Rol]"></asp:SqlDataSource>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblEdad" runat="server" Text="Edad:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtEdad" type="number" class="form-control" runat="server" required="true" placeholder="#">ID</asp:TextBox>
+                            <asp:SqlDataSource ID="SqlDataSourceRol" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionStringRol %>" SelectCommand="SELECT * FROM [Rol]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblGenero" runat="server" Text="Genero:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="ddlGenero" class="form-control" AutoPostBack="True" runat="server" required="true" DataSourceID="SqlDataSource1" DataTextField="TipoGenero" DataValueField="Genero" AppendDataBoundItems="True">
+                            <asp:DropDownList ID="ddlGenero" class="form-control" AutoPostBack="True" runat="server" required="true" DataSourceID="SqlDataSourceGenero" DataTextField="TipoGenero" DataValueField="Genero" AppendDataBoundItems="True">
                                 <asp:ListItem Text="Seleccione genero" Selected="false"></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [Genero]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSourceGenero" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionStringGenero %>" SelectCommand="SELECT * FROM [Genero]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblContraseña" runat="server" Text="Contraseña:"></asp:Label>
@@ -103,17 +98,14 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblCarrera" runat="server" Text="Curso estudiantil:"></asp:Label>
                             <br />
-                            <asp:DropDownList ID="DDLCurso" class="form-control" AutoPostBack="True" runat="server" required="true" Width="650px" DataSourceID="SqlDataSource3" DataTextField="tipoPrograma" DataValueField="Programa" AppendDataBoundItems="True">
+                            <asp:DropDownList ID="DDLCurso" class="form-control" AutoPostBack="True" runat="server" required="true" DataSourceID="SqlDataSourceCurso" DataTextField="tipoPrograma" DataValueField="Programa" AppendDataBoundItems="True">
                                 <asp:ListItem Text="Seleccione Curso" Selected="false"></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString %>" SelectCommand="SELECT * FROM [ProgramaEstudiantil]"></asp:SqlDataSource>
-                        </div>
-                        <div class="col-sm-5">
-                            <br />
+                            <asp:SqlDataSource ID="SqlDataSourceCurso" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionStringCurso %>" SelectCommand="SELECT * FROM [ProgramaEstudiantil]"></asp:SqlDataSource>
                         </div>
                         <div class="col-sm-5 text-center">
                             <br />
-                            <asp:Button ID="btnRegistrar" class="btn btn-sm btn-outline-info" runat="server" Text="Registrar" Width="100px" />
+                            <asp:Button ID="btnRegistrar" class="btn btn-sm btn-outline-info" runat="server" Text="Registrar" Width="100px" OnClick="btnRegistrar_Click" />
                         </div>
                         <div class="col-sm-5 d-inline">
                             <br />
@@ -151,7 +143,7 @@
                         <div class="col-sm-5">
                             <asp:Label ID="lblDocumentoE" runat="server" Text="Documento:"></asp:Label>
                             <br />
-                            <asp:TextBox ID="txtlblDocumentoE" type="number" class="form-control" runat="server" required="true" placeholder="#">ID</asp:TextBox>
+                            <asp:TextBox ID="txtDocumentoE" class="form-control" runat="server" required="true" placeholder="#"></asp:TextBox>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblTipoDeDocumentoE" runat="server" Text="Tipo de Documento:"></asp:Label>
@@ -162,11 +154,6 @@
                                 <asp:ListItem Text="tarjeta Identidad"></asp:ListItem>
                                 <asp:ListItem Text="Pasaporte"></asp:ListItem>
                             </asp:DropDownList>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblEdadE" runat="server" Text="Edad:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtEdadE" type="number" class="form-control" runat="server" required="true" placeholder="#">ID</asp:TextBox>
                         </div>
                         <div class="col-sm-5">
                             <asp:Label ID="lblGeneroE" runat="server" Text="Genero:"></asp:Label>
@@ -189,7 +176,7 @@
                             <asp:TextBox ID="txtCorreoE" type="email" class="form-control" runat="server" required="true" placeholder="@example"></asp:TextBox>
                         </div>
 
-                        <div class="col-12 text-center">
+                        <div class="col-sm-5">
                             <br />
                             <asp:Button ID="btnEditar" class="btn btn-sm btn-outline-info" runat="server" Text="Editar" />
                         </div>

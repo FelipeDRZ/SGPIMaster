@@ -17,41 +17,20 @@ namespace SGPI
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            /*using (SGPI_BDEntities objCrud = new SGPI_BDEntities())
-            {
-                UsuarioAdmin usr = new UsuarioAdmin();
-                try
-                {
-                    UsuarioAdmin usuario = objCrud.UsuarioAdmin.Find(usr.ID == int.Parse(txtUsuario.Text), usr.Contraseña==txtContraseña.Text);
-                    if (!string.IsNullOrEmpty(usuario.Usuario.ToString()))
-                    {
-                        if (usuario.Rol==1)
-                        {
-                            Response.Redirect("~/PrincipalAdministrador.aspx");
-                        }
-                        if (usuario.Rol == 2)
-                        {
-                            Response.Redirect("~/principalEstudiante.aspx");
-                        }
-                        if (usuario.Rol == 3)
-                        {
-                            Response.Redirect("~/Coordinador.aspx");
-                        }
-                    }
-                }
-                catch(Exception ex)
-                {
-
-                }
-            }*/
+            Session["Usuario"] = string.Empty;
             using (SGPI_BDEntities dBEntities = new SGPI_BDEntities())
             {
+                Criptografia criptografia = new Criptografia();
+                string hashpass = criptografia.CodigoHash(txtContraseña.Text);
+
+
                 UsuarioAdmin usr = new UsuarioAdmin();
                 try
                 {
                     UsuarioAdmin usuario = dBEntities.UsuarioAdmin.FirstOrDefault(a => a.Usuario == txtUsuario.Text && a.Contraseña == txtContraseña.Text);
                     if (usuario != null)
                     {
+                        Session["IDUsuario"] = usr.ID;
                         switch (usuario.Rol)
                         {
                             case 1:

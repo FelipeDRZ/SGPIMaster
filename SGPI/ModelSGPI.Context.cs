@@ -30,7 +30,7 @@ namespace SGPI
         public virtual DbSet<Estudiante> Estudiante { get; set; }
         public virtual DbSet<Genero> Genero { get; set; }
         public virtual DbSet<Homologacion> Homologacion { get; set; }
-        public virtual DbSet<Pagos> Pagos { get; set; }
+        public virtual DbSet<Pago> Pago { get; set; }
         public virtual DbSet<Programacion> Programacion { get; set; }
         public virtual DbSet<ProgramaEstudiantil> ProgramaEstudiantil { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }

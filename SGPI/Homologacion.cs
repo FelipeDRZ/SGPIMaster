@@ -20,8 +20,10 @@ namespace SGPI
         public int IdAsignatura { get; set; }
         public int CodigoHomologacion { get; set; }
         public double NotaDefinitiva { get; set; }
+        public int Idhomo { get; set; }
     
         public virtual Asignatura Asignatura { get; set; }
+        public virtual TipoHomologacion TipoHomologacion { get; set; }
         public virtual ProgramaEstudiantil ProgramaEstudiantil { get; set; }
         public virtual UsuarioAdmin UsuarioAdmin { get; set; }
     }
