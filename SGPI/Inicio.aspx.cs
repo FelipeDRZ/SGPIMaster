@@ -23,7 +23,6 @@ namespace SGPI
                 Criptografia criptografia = new Criptografia();
                 string hashpass = criptografia.CodigoHash(txtContraseña.Text);
 
-
                 UsuarioAdmin usr = new UsuarioAdmin();
                 try
                 {

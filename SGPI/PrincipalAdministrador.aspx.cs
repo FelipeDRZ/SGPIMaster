@@ -13,38 +13,47 @@ namespace SGPI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                DataTable dt = new DataTable();
-                dt.Columns.AddRange(new DataColumn[6] {new DataColumn("Documento"), new DataColumn("Nombre"), new DataColumn("Apellido"),
-                new DataColumn("Rol"), new DataColumn("Programa"), new DataColumn("Seleccionar") });
-                dt.Rows.Add("123","mauricio","amariles","Coordinador","Sistemas","Eliminar");
-
-                gvrEliminar.DataSource = dt;
-                gvrEliminar.DataBind();
-                gvrEliminar.HeaderRow.TableSection = TableRowSection.TableHeader;
-
-            }
+            
         }
-
-        protected void btnRegistrar_Click(object sender, EventArgs e)
+        protected void btnAgregar_Click(object sender, EventArgs e)
         {
+            Criptografia criptografia = new Criptografia();
             using (SGPI_BDEntities sGPI_BDEntities = new SGPI_BDEntities())
             {
                 UsuarioAdmin usuario = new UsuarioAdmin();
                 usuario.Documento = txtDocumento.Text;
+                usuario.TipoDocumento = Convert.ToInt32(ddlTipoDocumento.SelectedValue);
                 usuario.Nombre = txtNombre.Text;
                 usuario.Apellido = txtApellido.Text;
                 usuario.Usuario = txtNombreUsuario.Text;
-                usuario.Contraseña = txtContraseña.Text;
                 usuario.Correo = txtCorreo.Text;
+                usuario.Contraseña = criptografia.CodigoHash(criptografia.GenerarPass());
                 usuario.Genero = Convert.ToInt32(ddlGenero.SelectedValue);
                 usuario.Rol = Convert.ToInt32(rblRol.SelectedValue);
                 usuario.Programa = Convert.ToInt32(DDLCurso.SelectedValue);
 
+                /*sGPI_BDEntities.UsuarioAdmin.Add(usuario);
+                sGPI_BDEntities.SaveChanges();*/
+
+                try
+                {
+                    sGPI_BDEntities.UsuarioAdmin.Add(usuario);
+                    sGPI_BDEntities.SaveChanges();
+                    if (usuario.ID != 0)
+                    {
+                        Response.Write("<script>alert('usuario: " + usuario.Nombre + "ha sido creado')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('usuario no ha sido creado')</script>");
+                    }
+                }
+                catch (Exception except)
+                {
+
+                }
             }
             /*sGPI_BDEntities.UsuarioAdmin.Add();*/
-
         }
     }
 }

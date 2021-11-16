@@ -14,6 +14,12 @@
             <a class="nav-link active bg-info text-white font-weight-bold" href="PrincipalAdministrador.aspx">Modulo Usuario</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link active bg-dark font-weight-bold" href="ModificarAdmin.aspx">Modificar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active bg-dark font-weight-bold" href="EliminarAdmin.aspx">Eliminar</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link active bg-dark font-weight-bold" href="ReportesAdministrador.aspx">Modulo Reporte</a>
         </li>
     </ul>

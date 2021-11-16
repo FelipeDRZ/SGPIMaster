@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.Security;
 
 namespace SGPI
 {
@@ -27,7 +28,11 @@ namespace SGPI
                 }
             }
             return stringBuilder.ToString();
-        } 
+        }
+        public string GenerarPass()
+        {
+            return Membership.GeneratePassword(8, 0);
+        }
         
     }
 }

@@ -17,25 +17,18 @@
             <a class="nav-link active bg-info text-white font-weight-bold" href="PrincipalAdministrador.aspx">Modulo Usuario</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link active bg-dark font-weight-bold" href="ModificarAdmin.aspx">Modificar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active bg-dark font-weight-bold" href="EliminarAdmin.aspx">Eliminar</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link active bg-dark font-weight-bold" href="ReportesAdministrador.aspx">Modulo Reporte</a>
         </li>
     </ul>
     <!-- Panel -->
 
     <form id="form1" runat="server">
-        <div id="Usuario" class="container mt-3">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active text-dark font-weight-bold" data-toggle="tab" href="#Crear">Crear Usuario</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark font-weight-bold" data-toggle="tab" href="#Editar">Editar Usuario</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark font-weight-bold" data-toggle="tab" href="#Eliminar">Eliminar Usuario</a>
-                </li>
-            </ul>
             <!-----------------------------------------contenido------------------------------>
             <div class="tab-content">
                 <div id="Crear" class="container tab-pane active">
@@ -105,7 +98,7 @@
                         </div>
                         <div class="col-sm-5 text-center">
                             <br />
-                            <asp:Button ID="btnRegistrar" class="btn btn-sm btn-outline-info" runat="server" Text="Registrar" Width="100px" OnClick="btnRegistrar_Click" />
+                            <asp:Button ID="btnAgregar" class="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
                         </div>
                         <div class="col-sm-5 d-inline">
                             <br />
@@ -114,74 +107,7 @@
                     </div>
                 </div>
                 <!-----------------------------------------contenido de Editar------------------------------>
-                <div id="Editar" class="container tab-pane fade">
-                    <br />
-                    <h3>Editar Usuario</h3>
-                    <p>Aca puede editar Perfiles a su antojo.</p>
-                    <!-----------------------------------------contenido de Editar Formulario------------------------------>
-                    <div class="form-inline justify-content-center">
-                        <div class="col-12">
-                            <asp:Label ID="lblBuscar" class="font-weight-bold" runat="server" Text="Buscar:"></asp:Label>
-                            <asp:TextBox ID="txtBuscar" class="form-control" runat="server" placeholder="Ingrese Num. Documento" Width="700px"></asp:TextBox>
-                            <img src="Imagenes/search.png" />
-                            <asp:Button ID="btnBuscar" class="btn btn-danger" runat="server" Text="Buscar" />
-                            <br />
-                        </div>
-                        <div class="col-12">
-                            <br />
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblNombreE" runat="server" Text="Nombre:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtNombreE" class="form-control" runat="server" required="true" placeholder="Name"></asp:TextBox>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblApellidoE" runat="server" Text="Apellido:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtApellidoE" class="form-control" runat="server" required="true" placeholder="Last Name"></asp:TextBox>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblDocumentoE" runat="server" Text="Documento:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtDocumentoE" class="form-control" runat="server" required="true" placeholder="#"></asp:TextBox>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblTipoDeDocumentoE" runat="server" Text="Tipo de Documento:"></asp:Label>
-                            <br />
-                            <asp:DropDownList ID="DDLTipoDeDocumentoE" class="form-control" AutoPostBack="true" runat="server" required="true">
-                                <asp:ListItem Text="Seleccione Id" Selected="false"></asp:ListItem>
-                                <asp:ListItem Text="Cedula Ciudadania"></asp:ListItem>
-                                <asp:ListItem Text="tarjeta Identidad"></asp:ListItem>
-                                <asp:ListItem Text="Pasaporte"></asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblGeneroE" runat="server" Text="Genero:"></asp:Label>
-                            <br />
-                            <asp:DropDownList ID="DDLGeneroE" class="form-control" AutoPostBack="true" runat="server" required="true">
-                                <asp:ListItem Text="Seleccione genero" Selected="false"></asp:ListItem>
-                                <asp:ListItem Text="Masculino"></asp:ListItem>
-                                <asp:ListItem Text="Femenino"></asp:ListItem>
-                                <asp:ListItem Text="Otro"></asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="lblUserE" runat="server" Text="Nombre de Usuario:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtUserE" class="form-control" runat="server" required="true" placeholder="User Name"></asp:TextBox>
-                        </div>
-                        <div class="col-sm-5">
-                            <asp:Label ID="LblCorreoE" runat="server" Text="Correo Electronico:"></asp:Label>
-                            <br />
-                            <asp:TextBox ID="txtCorreoE" type="email" class="form-control" runat="server" required="true" placeholder="@example"></asp:TextBox>
-                        </div>
-
-                        <div class="col-sm-5">
-                            <br />
-                            <asp:Button ID="btnEditar" class="btn btn-sm btn-outline-info" runat="server" Text="Editar" />
-                        </div>
-                    </div>
-                </div>
+                
                 <!-----------------------------------------contenido de Eliminar------------------------------>
                 <div id="Eliminar" class="container tab-pane fade">
                     <br />
@@ -214,7 +140,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </form>
 </body>
 </html>

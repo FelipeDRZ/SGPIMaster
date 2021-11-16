@@ -127,6 +127,7 @@
     <Content Include="Coordinador.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Direccionador.aspx" />
+    <Content Include="EliminarAdmin.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Formato.css" />
     <Content Include="Global.asax" />
@@ -151,6 +152,7 @@
       <DependentUpon>ModelSGPI.edmx</DependentUpon>
       <LastGenOutput>ModelSGPI.cs</LastGenOutput>
     </Content>
+    <Content Include="ModificarAdmin.aspx" />
     <Content Include="NuevaContraseña.aspx" />
     <Content Include="PagoMatriculaEstudiante.aspx" />
     <Content Include="PrincipalAdministrador.aspx" />
@@ -285,6 +287,13 @@
     <Compile Include="Documento.cs">
       <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
+    <Compile Include="EliminarAdmin.aspx.cs">
+      <DependentUpon>EliminarAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarAdmin.aspx.designer.cs">
+      <DependentUpon>EliminarAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Estudiante.cs">
       <DependentUpon>ModelSGPI.tt</DependentUpon>
     </Compile>
@@ -332,6 +341,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelSGPI.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarAdmin.aspx.cs">
+      <DependentUpon>ModificarAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarAdmin.aspx.designer.cs">
+      <DependentUpon>ModificarAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevaContraseña.aspx.cs">
       <DependentUpon>NuevaContraseña.aspx</DependentUpon>
@@ -425,6 +441,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -446,6 +463,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReporteAdmin.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
