@@ -61,7 +61,8 @@
             <div class="form8 justify-content-cente">
                 <asp:Button ID="btnModificar" class="btn btn-danger btn-lg btn3d" runat="server" Text="Modificar" />
             </div>
-        </form>
+        </form> 
+
     </div>
 </body>
 </html>
