@@ -12,6 +12,7 @@ namespace SGPI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             if (!IsPostBack)
             {
                 DataTable dt = new DataTable();
@@ -23,7 +24,7 @@ namespace SGPI
                 gvrReportar.DataBind();
                 gvrReportar.HeaderRow.TableSection = TableRowSection.TableHeader;
 
-            }
+            }*/
         }
     }
 }
