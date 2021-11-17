@@ -45,23 +45,25 @@
                             <br />
                         </div>
                         <div class="COL-12">
-                            <asp:GridView ID="gvrEliminar" class="table table-borderless" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                            <asp:GridView ID="gvrEliminar" class="table table-borderless" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="ID">
                                 <Columns>
                                     <asp:BoundField HeaderText="Documento" DataField="Documento" SortExpression="Documento" />
+                                    <asp:BoundField HeaderText="ID" DataField="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
                                     <asp:BoundField HeaderText="Nombre" DataField="Nombre" SortExpression="Nombre" />
                                     <asp:BoundField HeaderText="Apellido" DataField="Apellido" SortExpression="Apellido" />
                                     <asp:BoundField HeaderText="Correo" DataField="Correo" SortExpression="Correo" />
-                                    <asp:BoundField HeaderText="TipoRol" DataField="TipoRol" SortExpression="TipoRol" />
-                                    <asp:BoundField HeaderText="tipoPrograma" DataField="tipoPrograma" SortExpression="tipoPrograma" />
-                                    <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Button" HeaderText="Eliminar Usuario" ShowDeleteButton="True" ShowHeader="True" />
+                                    <asp:BoundField DataField="TipoGenero" HeaderText="TipoGenero" SortExpression="TipoGenero" />
+                                    <asp:BoundField DataField="TipoRol" HeaderText="TipoRol" SortExpression="TipoRol" />
+                                    <asp:BoundField DataField="tipoPrograma" HeaderText="tipoPrograma" SortExpression="tipoPrograma" />
+                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger"/>
                                 </Columns>
                             </asp:GridView>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString7 %>" SelectCommand="SELECT UsuarioAdmin.Documento, UsuarioAdmin.Nombre, UsuarioAdmin.Apellido, UsuarioAdmin.Correo, Rol.TipoRol, ProgramaEstudiantil.tipoPrograma FROM UsuarioAdmin INNER JOIN Rol ON UsuarioAdmin.Rol = Rol.Rol AND UsuarioAdmin.Rol = Rol.Rol INNER JOIN ProgramaEstudiantil ON UsuarioAdmin.Programa = ProgramaEstudiantil.Programa AND UsuarioAdmin.Programa = ProgramaEstudiantil.Programa AND UsuarioAdmin.Documento = @txtBuscarEliminar" DeleteCommand="DELETE FROM [UsuarioAdmin] WHERE [Usuario.Documento] = [@txtBuscarEliminar]">
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SGPI_BDConnectionString7 %>" SelectCommand="SELECT UsuarioAdmin.Documento, UsuarioAdmin.ID, UsuarioAdmin.Nombre, UsuarioAdmin.Apellido, UsuarioAdmin.Correo, Genero.TipoGenero, Rol.TipoRol, ProgramaEstudiantil.tipoPrograma FROM UsuarioAdmin INNER JOIN Rol ON UsuarioAdmin.Rol = Rol.Rol INNER JOIN ProgramaEstudiantil ON UsuarioAdmin.Programa = ProgramaEstudiantil.Programa INNER JOIN Genero ON UsuarioAdmin.Genero = Genero.Genero WHERE (UsuarioAdmin.Documento = @Documento)" DeleteCommand="DELETE FROM [UsuarioAdmin] WHERE [ID] = @ID">
                                 <SelectParameters>
-                                    <asp:FormParameter FormField="txtBuscarEliminar" Name="txtBuscarEliminar" />
+                                    <asp:ControlParameter ControlID="txtBuscarEliminar" Name="Documento" PropertyName="Text" Type="String" />
                                 </SelectParameters>
                                 <DeleteParameters>
-                                    <asp:FormParameter FormField="txtBuscarEliminar" Name="txtBuscarEliminar" />
+                                    <asp:Parameter Name="ID" Type="Int32" />
                                 </DeleteParameters>
                             </asp:SqlDataSource>
                         </div>
