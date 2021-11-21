@@ -107,38 +107,6 @@
                     </div>
                 </div>
                 <!-----------------------------------------contenido de Editar------------------------------>
-                
-                <!-----------------------------------------contenido de Eliminar------------------------------>
-                <div id="Eliminar" class="container tab-pane fade">
-                    <br />
-                    <h3>Eliminar Usuario</h3>
-                    <p>en esta parte, puedes eliminar el usuario que desees.</p>
-                    <div class="form-inline justify-content-center">
-                        <div class="col-12">
-                            <asp:Label ID="lblBuscarEliminar" class="font-weight-bold" runat="server" Text="Buscar:"></asp:Label>
-                            <asp:TextBox ID="txtBuscarEliminar" class="form-control" runat="server" placeholder="Ingrese Num. Documento" Width="700px"></asp:TextBox>
-                            <img src="Imagenes/search.png" />
-                            <asp:Button ID="Button1" class="btn btn-danger" runat="server" Text="Buscar" />
-                            <br />
-                        </div>
-                        <div>
-                            <br />
-                            <br />
-                        </div>
-                        <div class="COL-12">
-                            <asp:GridView ID="gvrEliminar" class="table table-borderless" runat="server" AutoGenerateColumns="false">
-                                <Columns>
-                                    <asp:BoundField HeaderText="Documento" DataField="Documento" />
-                                    <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-                                    <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
-                                    <asp:BoundField HeaderText="Rol" DataField="Rol" />
-                                    <asp:BoundField HeaderText="Programa" DataField="Programa" />
-                                    <asp:BoundField HeaderText="Seleccionar" DataField="Seleccionar" />
-                                </Columns>
-                            </asp:GridView>
-                        </div>
-                    </div>
-                </div>
             </div>
     </form>
 </body>

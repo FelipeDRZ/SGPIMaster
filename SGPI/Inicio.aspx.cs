@@ -17,7 +17,7 @@ namespace SGPI
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Session["Usuario"] = string.Empty;
+            Session["IDUsuario"] = null;
             using (SGPI_BDEntities dBEntities = new SGPI_BDEntities())
             {
                 Criptografia criptografia = new Criptografia();
@@ -29,7 +29,8 @@ namespace SGPI
                     UsuarioAdmin usuario = dBEntities.UsuarioAdmin.FirstOrDefault(a => a.Usuario == txtUsuario.Text && a.Contraseña == txtContraseña.Text);
                     if (usuario != null)
                     {
-                        Session["IDUsuario"] = usr.ID;
+                        Session["IDUsuario"] = usuario.ID;
+                        Session["NombreUsuario"] = usuario.Nombre;
                         switch (usuario.Rol)
                         {
                             case 1:

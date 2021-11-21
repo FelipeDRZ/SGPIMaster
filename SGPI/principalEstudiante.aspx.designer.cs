@@ -15,6 +15,15 @@ namespace SGPI
     {
 
         /// <summary>
+        /// Control lblNombreUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
+
+        /// <summary>
         /// Control form1.
         /// </summary>
         /// <remarks>
@@ -78,24 +87,6 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
 
         /// <summary>
-        /// Control lblEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEdad;
-
-        /// <summary>
-        /// Control txtEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEdad;
-
-        /// <summary>
         /// Control lblCorreo.
         /// </summary>
         /// <remarks>
@@ -132,6 +123,15 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
 
         /// <summary>
+        /// Control SqlDataSource1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+
+        /// <summary>
         /// Control lblArchivo.
         /// </summary>
         /// <remarks>
@@ -141,13 +141,13 @@ namespace SGPI
         protected global::System.Web.UI.WebControls.Label lblArchivo;
 
         /// <summary>
-        /// Control txtArchivo.
+        /// Control fuCertificado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile txtArchivo;
+        protected global::System.Web.UI.WebControls.FileUpload fuCertificado;
 
         /// <summary>
         /// Control btnModificar.
